@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprar tickets</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+    <div id="contenedor" bg-dark bg-gradient>
+        <nav class="navbar navbar-expand-lg bg-dark text-white" id="navinicio"> 
+          <div class="container-fluid">
+            <a class="navbar-brand me-auto" href="#">
+              <img src="img/codoacodo.png" alt="Bootstrap" width="61" height="35">
+            </a>
+            <h7 class="p-3 mb-2"><span class="fw-bold">Conf Bs As</span><br></h7>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon bg-body"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ms-auto mb-2 mb-lg-0" >
+                <li class="nav-item">
+                  <a class="nav-link active text-white" aria-current="page" href="#">La conferencia</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="#">Los oradores</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="#">El lugar y la fecha</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="#">Conviertete en orador</a>
+                </li>
+              </ul>
+
+              <button type="button" class="btn btn-success" onclick="location.reload()">Comprar tickets</button>
+
+            </div>
+          </div>
+        </nav>
+        <br>
+        <div id="contenedor3" class="d-grid gap-2 d-md-flex justify-content-md-center">
+          <div class="row border-secondary align-items-center btn-group" id="divtipoticket">
+            <div class="col">
+              <button id="estudiante" type="button" class=" btn btn-outline-primary text-black"><strong>Estudiante</strong><br>Tienen un descuento<br><strong>80%</strong><br>*presentar documentacion</button>
+            </div>
+              <div class="col">
+                <button id="traine" type="button" class="btn btn-outline-info text-black"><strong>Traine</strong><br>Tienen un descuento<br><strong>50%</strong><br>*presentar documentacion</button>
+              </div>
+              <div class="col">
+                <button id="junior" type="button" class="btn btn-outline-secondary text-black"><strong>Junior</strong><br>Tienen un descuento<br><strong>15%</strong><br>*presentar documentacion</button>
+              </div>
+          </div>
+        </div>
+    </div>
+    <div>
+  <br>
+  <h6 class="display-7 fw-light text-center"><span>VENTA</span></h6> 
+  <h4 class="display-7 fw-light text-dark text-center"><span class="fw-bold clase1" id="eventListener">VALOR DE TICKET</span></h4>
+  <br>
+</div>
+
+<div id="contenedor4" class="d-grid gap-2 d-md-flex justify-content-md-center">
+  <form class="row g-3">
+    <div class="col-md-6">
+      <input type="email" class="form-control" id="inputNombre" placeholder="Nombre">
+    </div>
+    <div class="col-md-6">
+      <input type="email" class="form-control" id="inputApellido" placeholder="Apellido">
+    </div>
+    <div class="col-12">
+      <input type="text" class="form-control" id="inputCorreo" placeholder="Correo">
+    </div>
+    <div class="col-md-6">
+      <label for="inputCity" class="form-label">Cantidad</label>
+      <input type="number" class="form-control" id="inputCity" placeholder="Cantidad" maxlength="3">
+    </div>
+    <div class="col-md-6">
+      <label for="inputState" class="form-label">Categoría</label>
+      <select id="inputState" class="form-select" onchange="cambiavalorconselect()">
+        <option selected value="0">--Seleccione--</option>
+        <option value="1">Estudiante</option>
+        <option value="2">Traine</option>
+        <option value="3">Junior</option>
+      </select>    
+    </div>    
+    <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+      <div class="alert alert-primary col-md-12" role="alert" >
+        <p id="totalapagar">Total a pagar: $</p>
+      </div>  
+    </div>  
+    <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+      <div class="col-md-6">
+        <button class="btn btn-success col-md-12" type="button" onclick="location.reload()">Borrar</button>
+      </div>
+      <div class="col-md-6">
+        <button class="btn btn-success col-md-12" type="button" id="calcular">Resumen</button>
+      </div>
+    </div>
+  </form>
+  
+</div>
+<br>
+
+    <script src="js/funciones.js"></script>
+</body>
+</html>

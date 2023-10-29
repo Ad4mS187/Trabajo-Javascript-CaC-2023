@@ -1,0 +1,25 @@
+
+
+Que debe hacer la funcion
+
+Si selecciono boton1, Entonces
+
+    guardo en la varible porcentajedesc el porcentaje de descuento %80    
+    veo la forma de que quede seleccionado el boton elegido
+    cambio el valor del ticket
+
+elseif selecciono boton2, Entonces 
+
+    guardo en la variable porcentajedesc el porcentaje de descuento %50
+    veo la forma en que quede seleccionado el boton elegido
+    cambio la propiedad de seleccionado en los otros dos botones
+    cambio el valor del ticket
+
+elseif seleccionoboton3, Entonces
+
+    guardo en la variable porcentajedesc el porcentaje de descuento %15
+    veo la forma en que quede seleccionado el boton elegido
+    cambio la propiedad de seleccionado en los otros dos botones
+    cambio el valor del ticket
+
+
